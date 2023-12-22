@@ -9,7 +9,7 @@ function GetMap() {
         // Replace <Your Azure Maps Key> with your Azure Maps subscription key. https://aka.ms/am-primaryKey
         authOptions: {
         authType: 'subscriptionKey',
-        subscriptionKey: 'fP02nrn1wVTxw9p-oHVMhAnA9A7UtOOpuwWl1YfyTLk'
+        subscriptionKey: '<key in your primary subscription key here'
         }
     });
 
@@ -98,7 +98,7 @@ function GetMap() {
     const pricing_container = document.getElementById('ad-label-box')
 
     //get route calculation details
-    fetch(`https://atlas.microsoft.com/route/directions/json?subscription-key=fP02nrn1wVTxw9p-oHVMhAnA9A7UtOOpuwWl1YfyTLk&api-version=1.0&query=${startLocation.value.split(':')[1]}:${endLocation.value.split(':')[1]}`)
+    fetch(`https://atlas.microsoft.com/route/directions/json?subscription-key=<subscription_key>&api-version=1.0&query=${startLocation.value.split(':')[1]}:${endLocation.value.split(':')[1]}`)
     .then(response => response.json())
     .then(route =>{
 

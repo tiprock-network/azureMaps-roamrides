@@ -7,7 +7,7 @@ let endList = document.getElementById('end-locations-list');
 function getLocations(qLocation,from){
     // Fetch JSON data from the API.
     
-    fetch(`https://atlas.microsoft.com/search/address/json?subscription-key=fP02nrn1wVTxw9p-oHVMhAnA9A7UtOOpuwWl1YfyTLk&api-version=1.0&language=en-US&query=${qLocation}`)
+    fetch(`https://atlas.microsoft.com/search/address/json?subscription-key=<primary subscription key>&api-version=1.0&language=en-US&query=${qLocation}`)
     .then(response => response.json())
     .then(data => {
         // Iterate over the JSON data and add options to the select element.
